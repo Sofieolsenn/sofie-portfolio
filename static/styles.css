@@ -1,0 +1,269 @@
+@import 'variables.css';
+
+@keyframes nav-active-pop {
+    0% { transform: scale(0.95); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* navigation */
+.primary-nav {
+    width: 100%;
+    background-color: lightgray;
+    height: 50px;
+    z-index: 10;
+    padding: 10px 5px 15px 5px;
+    font-size: 0.9rem;
+    position: sticky;
+    top: 0;
+
+    ul{
+        list-style: none;
+        gap: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 100px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        a.active {
+            background-color: aqua;
+            animation: nav-active-pop 0.35s ease-out;
+        }
+
+        a i,
+        a span {
+            pointer-events: none;
+        }
+
+        i, .nav-a-home, .nav-a-contact {
+            display: none;
+        }
+    }
+}
+
+.nav-mobile{
+    width: 90%;
+    height: 50px;
+    padding: 0px 20px;
+    border-radius: 100px;
+    background-color: lightgray;
+    z-index: 10;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            text-decoration: none;
+            color: white;
+            border-radius: 100px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        a.active {
+            background-color: aqua;
+            animation: nav-active-pop 0.35s ease-out;
+        }
+
+        a i {
+            pointer-events: none;
+        }
+    }
+}
+
+/* === home === */
+.home-container {
+    margin: 10px;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "home home"
+        "service service"
+        "abilities abilities"
+        "location location";
+
+    gap: 10px;
+    
+    section{
+        border-radius: 30px;
+        padding: 20px;
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .home-about {
+        grid-area: home;
+        background-color: blue;
+    }
+
+    .home-location {
+        grid-area: location;
+        background-color: red;
+    }
+
+    .home-services {
+        grid-area: service;
+        background-color: green;
+    }
+
+    .home-abilities {
+        grid-area: abilities;
+        background-color: yellow;
+    }
+
+}
+
+/* === Large phone === */
+@media (min-width: 480px) {
+    /*responsive grid layout*/
+    .home-container {
+        margin: 10px;
+        display: grid;
+    
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "home home"
+            "service location"
+            "service abilities"
+            ". abilities";
+    
+        gap: 14px;
+    }
+
+    .primary-nav {
+        height: 60px;
+        padding: 15px 0px;
+        ul {
+            gap: 20px;
+
+            li a {
+                padding: 8px 20px;
+            }
+        }
+    }
+}
+
+ /* === Small tablet: responsive navition === */
+ @media (min-width: 768px) {
+    .primary-nav {
+        font-size: 1em;
+        height: 70px;
+        width: 97%;
+        margin: auto;
+        margin-top: 30px;
+        padding: 13px 0px;
+        border-radius: 20px;
+
+        ul {
+            gap: 30px;
+
+            li a {
+                display: flex;
+                align-items: center;
+                gap: 10px; 
+                text-decoration: none;
+                color: white;
+                padding: 10px 20px;
+                /* background-color: gray; */
+                border-radius: 100px;
+            }
+
+            li a i {
+                display: block;
+            }
+
+            
+        }
+    }
+}
+
+
+/* === Tablet === */
+@media (min-width: 1000px) {
+     /*responsive grid layout*/
+    .home-container {
+        margin: 10px auto;
+        max-width: 1000px;
+        display: grid;
+    
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "home home home"
+            "service abilities abilities"
+            "service location location" ;
+    
+        gap: 14px;
+    }
+
+    .nav-mobile { display: none; }
+
+    .primary-nav {
+        width: 100%;
+        max-width: 1000px;
+        margin: 20px auto;
+        position: sticky;
+        background-color: lightgray;
+        height: 80px;
+        padding: 20px 5px;
+        font-size: 1rem;
+
+        ul {
+            list-style: none;
+            gap: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+           .nav-a-home, .nav-a-contact {
+                display: block;
+                display: flex;
+            }
+        }
+    }
+}
+
+

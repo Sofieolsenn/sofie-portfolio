@@ -1,7 +1,32 @@
 {
-    "": {
-        "english": "",
-        "danish": "",
-        "spanish": ""
+    "hi": {
+        "english": "hello",
+        "danish": "hej",
+        "japanese": "konichiwa"
+    },
+    "home": {
+        "english": "home",
+        "danish": "hjem",
+        "japanese": ""
+    },
+    "about": {
+        "english": "about",
+        "danish": "om mig",
+        "japanese": ""
+    },
+    "projects": {
+        "english": "projects",
+        "danish": "projekter",
+        "japanese": ""
+    },
+    "skills": {
+        "english": "tech skills",
+        "danish": "kompetencer",
+        "japanese": ""
+    },
+    "contact": {
+        "english": "contact",
+        "danish": "Kontakt",
+        "japanese": ""
     }
 }

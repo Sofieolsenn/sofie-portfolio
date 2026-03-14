@@ -48,8 +48,8 @@ def no_cache(view):
 
 
 ##############################
-google_spread_sheet_key = "1SbJF1joPi3RQhuTERWlubJ67L98uAL-_ycwVouiP2zw"
-allowed_languages = ["english", "danish", "spanish"]
+google_spread_sheet_key = "1gliI2Lj5nHKb6ZwiR5po29K9LEaffbalbkJVZf5SDL4"
+allowed_languages = ["english", "danish", "japanese"]
 default_language = "english"
 
 ##############################

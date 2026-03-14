@@ -40,9 +40,86 @@ def global_variables():
 
 ############################## 
 @app.get("/")
-def view_index():
-        return render_template("index.html")
-  
+@app.route("/<lan>", methods=["GET", "POST"])
+def view_index(lan = "english"):     
+    if lan not in x.allowed_languages: lan = "english"
+    x.default_language = lan
+
+    return render_template("index.html", lan=lan)
+
+
+############################# 
+@app.route("/home", methods=["GET"])
+def home():
+    try:
+        html = render_template("_home.html")
+        return f"""<browser mix-update="#SPA-container">{ html }</browser>"""
+    except Exception as ex:
+        ic(ex)
+        return "error"
+    finally:
+        pass
+
+############################# 
+@app.route("/about", methods=["GET"])
+def about():
+    try:
+        html = render_template("_about.html")
+        return f"""<browser mix-update="#SPA-container">{ html }</browser>"""
+    except Exception as ex:
+        ic(ex)
+        return "error"
+    finally:
+        pass
+
+############################# 
+@app.route("/projects", methods=["GET"])
+def projects():
+    try:
+        html = render_template("_projects.html")
+        return f"""<browser mix-update="#SPA-container">{ html }</browser>"""
+    except Exception as ex:
+        ic(ex)
+        return "error"
+    finally:
+        pass
+
+############################# 
+@app.route("/abilities", methods=["GET"])
+def abilities():
+    try:
+        html = render_template("_abilites.html")
+        return f"""<browser mix-update="#SPA-container">{ html }</browser>"""
+    except Exception as ex:
+        ic(ex)
+        return "error"
+    finally:
+        pass
+
+############################# 
+@app.route("/services", methods=["GET"])
+def services():
+    try:
+        html = render_template("_services.html")
+        return f"""<browser mix-update="#SPA-container">{ html }</browser>"""
+    except Exception as ex:
+        ic(ex)
+        return "error"
+    finally:
+        pass
+
+############################# 
+@app.route("/contact", methods=["GET"])
+def contact():
+    try:
+        html = render_template("_contact.html")
+        return f"""<browser mix-update="#SPA-container">{ html }</browser>"""
+    except Exception as ex:
+        ic(ex)
+        return "error"
+    finally:
+        pass
+
 
 ##############################
 @app.get("/get-data-from-sheet")
@@ -65,8 +142,7 @@ def get_data_from_sheet():
             item = {
                     'english': row['english'],
                     'danish': row['danish'],
-                    'spanish': row['spanish']
-               
+                    'japanese': row['japanese'],
             }
             # Append the dictionary to the list
             data[row['key']] = (item)

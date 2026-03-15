@@ -2,22 +2,34 @@
 
 :root{
     --main-font: 'poppins';
-    --font-size-p: #;
-    --font-size-h1: #;
-    --font-size-h2: #;
-    --font-size-h3: #;
+
+      /* Paragraph and link text */
+    --font-size-p: clamp(0.875rem, 1rem, 1rem);    /* 14–16px stable */
+
+    /* Smaller responsive headings using clamp(min, preferred, max) */
+    --font-size-h1: clamp(1.5rem, 1.75rem, 2rem);  /* ~24–32px */
+    --font-size-h2: clamp(1.25rem, 1.5rem, 1.75rem); /* ~20–28px */
+    --font-size-h3: clamp(1.125rem, 1.25rem, 1.5rem); /* ~18–24px */
 
     /*colors*/
-    --bg-color: white;
-    --bg-accent-color: rgba(42, 42, 42, 0.07);
-    --bg-nav-color: #7d646435;
-    --dark-color: #2A2A2A;
-    --active-color: #60C656;
-    --text-color: #2A2A2A;
-    --navbar-text-color: #FFE1CD;
-    --text-accent-color: #7D6464;
-    --border-color: rgba(0, 0, 0, 0.49);
+    --bg-color: rgb(180, 180, 175);
+    --box-color: rgb(239, 236, 227);
+    --bg-accent-color: lightgrey;
 
+    --active-box-color: #60C656;
+    --active-text-color: #309527;
+    --nav-text-color: gray;
+
+    --text-color: #3a3636;
+    --text-accent-color: #7D6464;
+    --a-color: #6B99D2;
+    --a-hover-color: #3264d9;
+    --border-color: rgba(0, 0, 0, 0.046);
+
+
+    --frontend-color: #d6d6d6;
+    --backend-color: #d6d6d6;
+    --other-color: #d6d6d6;
 }
 
 /* [data-theme="dark"] {

@@ -6,6 +6,7 @@
     100% { transform: scale(1); }
 }
 
+
 *{
     padding: 0;
     margin: 0;
@@ -18,16 +19,37 @@ body {
     color: var(--text-color);
 }
 
+h1, h2, h3  {
+    font-weight: 400;
+}
+
+p, a, span, ul, li {
+    font-weight: 300;
+}
+
+a {
+    color: var(--a-color);
+    /* font-style: italic; */
+    cursor: pointer;
+    transition: color 0.2s ease; 
+
+    &:hover{
+        color: var(--a-hover-color);
+        font-weight: 400;
+    }
+}
+
 /* navigation */
 .primary-nav {
     width: 100%;
-    background-color: lightgray;
+    background-color: var(--box-color);
     height: 50px;
     z-index: 10;
     padding: 10px 5px 15px 5px;
     font-size: 0.9rem;
     position: sticky;
     top: 0;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 
     ul{
         list-style: none;
@@ -41,14 +63,15 @@ body {
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: white;
+            color: var(--nav-text-color);
             padding: 5px 10px;
             border-radius: 100px;
             transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
         a.active {
-            background-color: aqua;
+            background-color: var(--active-box-color);
+            color: var(--active-text-color);
             animation: nav-active-pop 0.35s ease-out;
         }
 
@@ -64,16 +87,17 @@ body {
 }
 
 .nav-mobile{
-    width: 90%;
+    width: 80%;
     height: 50px;
     padding: 0px 20px;
     border-radius: 100px;
-    background-color: lightgray;
+    background-color: var(--box-color);
     z-index: 10;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 
     position: fixed;
     bottom: 20px;
@@ -93,13 +117,14 @@ body {
             justify-content: center;
             padding: 10px 14px;
             text-decoration: none;
-            color: white;
+            color: var(--text-color);
             border-radius: 100px;
             transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
         a.active {
-            background-color: aqua;
+            background-color: var(--active-box-color);
+            color: var(--active-text-color);
             animation: nav-active-pop 0.35s ease-out;
         }
 
@@ -115,46 +140,157 @@ body {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto(4, 1fr);
     grid-template-areas:
         "home home"
+        "project project"
         "service service"
-        "abilities abilities"
-        "location location";
+        "abilities abilities";
 
     gap: 10px;
     
     section{
         border-radius: 30px;
-        padding: 20px;
 
-        h1, h2 {
-            margin-bottom: 10px;
-        }
     }
 
     .home-about {
         grid-area: home;
-        background-color: blue;
+        background-color: var(--box-color);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            margin-bottom: 10px;
+        }
+        p { 
+            max-width: 600px; 
+            margin-bottom: 10px;
+            font-size: var(--font-size-h3);
+
+        }
     }
 
-    .home-location {
-        grid-area: location;
-        background-color: red;
+    .home-project {
+        grid-area: project;
+        background-color: lightgray;
+        border: 5px solid white; 
+        display: flex;
+        min-height: 200px;
+        justify-content: space-between;
+        padding: 10px 20px 20px 20px;
+
+        .home-project-container1 {
+            align-self: flex-end; /* bottom */
+
+            h3 {
+                font-size: 30px;
+      
+            }
+        }
+        
+        .home-project-container2 {
+            align-self: flex-start; /* top */
+            text-align: right;
+        }
+
     }
 
     .home-services {
         grid-area: service;
-        background-color: green;
+        background-color: var(--box-color);
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        h2 {
+            padding: 15px 20px 10px 20px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            section {
+                background-color: lightgray;
+                min-height: 100px;
+                border-radius: 30px;
+                padding: 20px;
+
+                display: flex;
+                gap: 10px;
+                justify-content: space-around;
+                align-items: center;
+
+                
+                p { 
+                    max-width: 200px;
+                    font-size: 0.9em;
+                }
+                h3 {
+                    font-size: 3rem;
+                    font-weight: 200;
+                }
+            }
+        }
     }
 
     .home-abilities {
         grid-area: abilities;
-        background-color: yellow;
+        background-color: var(--box-color);
+        padding: 30px;
+
+        .home-abilities-header-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            margin-top: 10px;
+
+        }
+
+        .home-abilities-content-container {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 20px;
+                p { 
+                    border-radius: 100px;
+                    padding: 5px 10px;
+                    width: fit-content;
+                }
+
+                .frontend-color { background-color: var(--frontend-color) }
+                 .backend-color { background-color: var(--backend-color) }
+                 .other-color { background-color: var(--other-color) }
+                 display: flex;
+                 flex-wrap: wrap;
+                 gap: 10px;
+                 margin-bottom: 20px;
+                 p { 
+                     border-radius: 100px;
+                     padding: 5px 10px;
+                     width: fit-content;
+                 }
+ 
+                 .frontend-color { background-color: var(--frontend-color) }
+                  .backend-color { background-color: var(--backend-color) }
+                  .other-color { background-color: var(--other-color) }
+ 
+
+        }
+
     }
 
 }
 
+/* === Responsive home grid and navigation - overall structure === */
 /* === Large phone === */
 @media (min-width: 480px) {
     /*responsive grid layout*/
@@ -166,9 +302,10 @@ body {
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
             "home home"
-            "service location"
+            "project project"
             "service abilities"
-            ". abilities";
+            "service abilities"
+            ;
     
         gap: 14px;
     }
@@ -205,7 +342,7 @@ body {
                 align-items: center;
                 gap: 10px; 
                 text-decoration: none;
-                color: white;
+                color: var(--text-color);
                 padding: 10px 20px;
                 /* background-color: gray; */
                 border-radius: 100px;
@@ -222,7 +359,7 @@ body {
 
 
 /* === Tablet === */
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
      /*responsive grid layout*/
     .home-container {
         margin: 10px auto;
@@ -233,8 +370,8 @@ body {
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
             "home home home"
-            "service abilities abilities"
-            "service location location" ;
+            "service project project"
+            "service abilities abilities" ;
     
         gap: 14px;
     }
@@ -246,7 +383,6 @@ body {
         max-width: 1000px;
         margin: 20px auto;
         position: sticky;
-        background-color: lightgray;
         height: 80px;
         padding: 20px 5px;
         font-size: 1rem;

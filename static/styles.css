@@ -146,16 +146,18 @@ a {
 
 
 /* === footer === */
-.social-card {
+footer {
     background-color: var(--box-color);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap-reverse;
-    padding: 20px 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
     border-radius: 30px;
-    height: 90px;
-    margin: 15px 0px;
+    min-height: 90px;
+    max-height: fit-content;
+    margin: 15px 0px 100px 0px;
 
     .social-cta {
         text-decoration: none;
@@ -196,6 +198,20 @@ a {
         }
     }
 }
+
+@media (min-width: 560px) {
+   footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+    border-radius: 30px;
+    height: 90px;
+   }
+}
+
+/* Footer responsiveness */
+
 
 /* === home === */
 .home-container {
@@ -600,7 +616,7 @@ a {
         display: grid;
     
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
             "home home home"
             "service project project"

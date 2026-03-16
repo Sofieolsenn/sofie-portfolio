@@ -69,6 +69,10 @@ a {
             transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
+        a:hover {
+            color: var(--active-text-color);
+        }
+
         a.active {
             background-color: var(--active-box-color);
             color: var(--active-text-color);
@@ -122,6 +126,10 @@ a {
             transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
+        a:hover {
+            color: var(--active-text-color);
+        }
+
         a.active {
             background-color: var(--active-box-color);
             color: var(--active-text-color);
@@ -151,6 +159,13 @@ a {
     
     section{
         border-radius: 30px;
+        a {
+            color: black;
+        }
+
+        .fa-angle-right {
+            color: rgb(178, 178, 178)
+        }
 
     }
 
@@ -165,35 +180,64 @@ a {
         h1 {
             margin-bottom: 10px;
         }
-        p { 
-            max-width: 600px; 
-            margin-bottom: 10px;
-            font-size: var(--font-size-h3);
 
+        .home-about-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: self-start;
+
+            p { 
+                max-width: 600px; 
+                margin-bottom: 10px;
+                font-size: var(--font-size-h3);
+    
+            }
+
+            .home-about-content-link {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-right: 20px;
+
+                a {
+                    border: 1px solid rgb(184, 184, 184);
+                    color:  rgb(184, 184, 184);
+                    text-decoration: none;
+                    padding: 8px 20px;
+                    border-radius: 100px;
+                    text-align: center;
+                }
+            }
         }
+
     }
 
     .home-project {
         grid-area: project;
         background-color: lightgray;
         border: 5px solid white; 
-        display: flex;
         min-height: 200px;
-        justify-content: space-between;
         padding: 10px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-        .home-project-container1 {
-            align-self: flex-end; /* bottom */
+        &:hover {
+            transform: translateY(-3px) rotate3d(1, 0, 0, 3deg);
+            box-shadow: 0 12px 32px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .home-project-container2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             h3 {
-                font-size: 30px;
-      
+                font-size: 1.9rem;
             }
-        }
-        
-        .home-project-container2 {
-            align-self: flex-start; /* top */
-            text-align: right;
         }
 
     }
@@ -201,23 +245,38 @@ a {
     .home-services {
         grid-area: service;
         background-color: var(--box-color);
-        padding: 5px;
+        padding: 0px 5px 5px 5px;
         display: flex;
         flex-direction: column;
         justify-content: end;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-3px) rotate3d(1, 0, 0, 3deg);
+            box-shadow: 0 12px 32px 8px rgba(0, 0, 0, 0.08);
+        }
 
         h2 {
             padding: 15px 20px 10px 20px;
         }
 
-        div {
+        .home-services-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0px 20px 0px 0px;
+        }
+
+        .home-services-content {
             display: flex;
             flex-direction: column;
             gap: 5px;
 
             section {
                 background-color: lightgray;
-                min-height: 100px;
+                min-height: 120px;
                 border-radius: 30px;
                 padding: 20px;
 
@@ -243,6 +302,13 @@ a {
         grid-area: abilities;
         background-color: var(--box-color);
         padding: 30px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-3px) rotate3d(1, 0, 0, 3deg);
+            box-shadow: 0 12px 32px 8px rgba(0, 0, 0, 0.08);
+        }
 
         .home-abilities-header-container{
             display: flex;
@@ -361,6 +427,10 @@ a {
 /* === Tablet === */
 @media (min-width: 800px) {
      /*responsive grid layout*/
+    .home-container .home-about .home-about-content .home-about-content-link {
+        flex-direction: column;
+    }
+
     .home-container {
         margin: 10px auto;
         max-width: 1000px;
@@ -402,4 +472,4 @@ a {
     }
 }
 
-
+/*===  teaser   ===*/

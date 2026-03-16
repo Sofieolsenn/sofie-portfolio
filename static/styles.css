@@ -805,7 +805,6 @@ footer {
     gap: 12px;
 
     article {
-        background-color:var(--box-color);
         border-radius: 30px;
         padding: 35px;
 
@@ -821,6 +820,23 @@ footer {
             flex-direction: column;
             gap: 10px;
         }
+    }
+
+    .deactivated {
+        background-color: var(--box-color);
+        color: var(--muted-text-color, #888);
+        opacity: 0.6;
+
+        span {
+            background-color: rgba(0, 0, 0, 0.08);
+            padding: 4px 10px;
+            width: fit-content;
+            border-radius: 100px;
+        }
+    }
+
+    .activated {
+        background-color: var(--box-color);
     }
     
 }

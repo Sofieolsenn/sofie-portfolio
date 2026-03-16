@@ -88,7 +88,7 @@ def projects():
 @app.route("/abilities", methods=["GET"])
 def abilities():
     try:
-        html = render_template("_abilites.html")
+        html = render_template("_abilities.html")
         return f"""<browser mix-update="#SPA-container">{ html }</browser>"""
     except Exception as ex:
         ic(ex)

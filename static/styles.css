@@ -427,6 +427,117 @@ footer {
 
 }
 
+/* === abilities page === */
+.abilities-page {
+    margin: 10px;
+    max-width: 1000px;
+    padding: 24px 16px 30px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    background-color: var(--box-color);
+    border-radius: 30px;
+}
+
+.abilities-page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 4px 2px 8px 2px;
+}
+
+.abilities-page-title h1 {
+    font-size: var(--font-size-h1, 1.6rem);
+    text-transform: lowercase;
+    margin-bottom: 4px;
+}
+
+.abilities-page-subtitle {
+    font-size: 0.9rem;
+    color: var(--muted-text-color, #888);
+    max-width: 420px;
+}
+
+.abilities-page-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.abilities-group {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 18px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.abilities-group-title {
+    font-size: 0.95rem;
+    text-transform: lowercase;
+    color: var(--muted-text-color, #666);
+}
+
+.abilities-group-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ability-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+.ability-pill--legend {
+    padding: 4px 10px;
+    background-color: transparent;
+}
+
+.ability-status-icon {
+    font-size: 0.55rem;
+}
+
+.ability-pill--frontend {
+    background-color: var(--frontend-color, #ffb3c6);
+}
+
+.ability-pill--backend {
+    background-color: var(--backend-color, #c7d8ff);
+}
+
+.ability-pill--other {
+    background-color: var(--other-color, #c7f5c3);
+}
+
+.ability-pill--ux {
+    background-color: #ffe2a8;
+}
+
+.ability-pill--learning {
+    /* keep text color as --text-color; only icon is colored */
+}
+
+.ability-pill--syntax {
+    /* keep text color as --text-color; only icon is colored */
+}
+
+.ability-status-icon--learning {
+    color: #f7b500;
+}
+
+.ability-status-icon--syntax {
+    color: #6c7aff;
+}
+
 /* === about === */
 .about-container {
     margin: 10px;
@@ -647,6 +758,21 @@ footer {
 
     .nav-mobile { display: none; }
 
+    .abilities-page {
+        margin: 20px auto;
+        padding: 26px 24px 34px 24px;
+    }
+
+    .abilities-page-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .abilities-group {
+        padding: 20px 22px 18px 22px;
+    }
+
     .primary-nav {
         width: 100%;
         max-width: 1000px;
@@ -672,3 +798,30 @@ footer {
 }
 
 /*===  teaser   ===*/
+
+.projects-page {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    article {
+        background-color:var(--box-color);
+        border-radius: 30px;
+        padding: 35px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+
+        .project-content {
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+    
+}
+

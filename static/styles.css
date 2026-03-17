@@ -386,16 +386,17 @@ footer {
                 }
                 
             }
-            /* @media (min-width: 800px) {
+            @media (min-width: 790px) {
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
+                margin-bottom: 0;
 
                 section {
                     min-height: 120px;
-                    min-width: 0;
+                    min-width: 100%;
                 }
-            } */
+            }
         }
     }
 
@@ -550,14 +551,6 @@ footer {
 
 .ability-pill--ux {
     background-color: #ffe2a8;
-}
-
-.ability-pill--learning {
-    /* keep text color as --text-color; only icon is colored */
-}
-
-.ability-pill--syntax {
-    /* keep text color as --text-color; only icon is colored */
 }
 
 .ability-status-icon--learning {
@@ -756,23 +749,13 @@ footer {
         display: grid;
     
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
             "home home home"
             "service project project"
             "service abilities abilities" ;
     
         gap: 14px;
-
-        .home-services-content {
-            display: flex;
-            flex-direction: column;   /* stay vertical */
-            flex-wrap: nowrap;        /* don’t form multiple columns */
-            gap: 5px;
-        }
-        .home-services-content > section {
-            width: 100%;              /* each card full width */
-        }
     }
 
     .home-container .home-about {
@@ -793,7 +776,6 @@ footer {
             margin-right: 20px;
          }
    }
-
     .about-container {
         margin: 10px auto;
         max-width: 1000px;

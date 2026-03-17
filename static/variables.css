@@ -12,12 +12,12 @@
     --font-size-h3: clamp(1.125rem, 1.25rem, 1.5rem); /* ~18–24px */
 
     /*colors*/
-    --bg-color: rgb(180, 180, 175);
-    --box-color: rgb(239, 236, 227);
+    --bg-color: rgb(155, 160, 206);
+    --box-color: rgb(242, 241, 239);
     --bg-accent-color: lightgrey;
 
-    --active-box-color: #60C656;
-    --active-text-color: #309527;
+    --active-box-color: #b2c4e7;
+    --active-text-color: #5866b3;
     --nav-text-color: gray;
 
     --text-color: #3a3636;

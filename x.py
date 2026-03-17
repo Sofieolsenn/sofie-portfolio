@@ -1,12 +1,8 @@
-from flask import request, make_response, render_template
+from flask import request, make_response, jsonify
 import mysql.connector
 import re 
 import json
 import os
-
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 
 from functools import wraps
 

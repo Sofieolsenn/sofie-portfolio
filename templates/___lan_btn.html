@@ -1,0 +1,14 @@
+<li class="lan-toggle">
+    <a 
+        href="{{ url_for('view_index', lan='english') }}" 
+        class="lan-toggle-option {% if lan == 'english' %}lan-toggle-option--active{% endif %}"
+    >
+        EN
+    </a>
+    <a 
+        href="{{ url_for('view_index', lan='danish') }}" 
+        class="lan-toggle-option {% if lan == 'danish' %}lan-toggle-option--active{% endif %}"
+    >
+        DA
+    </a>
+</li>

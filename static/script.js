@@ -29,5 +29,3 @@ if (SPA_CONTAINER) {
     });
 }
 
-
-

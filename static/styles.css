@@ -17,7 +17,29 @@ body {
     font-family: var(--main-font);
     background-color: var(--bg-color);
     color: var(--text-color);
+    background-image: url("/static/img/test.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+.noise-overlay {
+    position: fixed;
+    inset: 0;              /* shorthand for top:0; right:0; bottom:0; left:0 */
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.6;         /* adjust to taste */
+    pointer-events: none;  /* allows clicking through */
+    z-index: 9999;         /* above everything visually */
+}
+
+.noise-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* ensures full coverage */
+}
+
 
 main {
     max-width: 1000px; 
@@ -45,6 +67,19 @@ a {
     }
 }
 
+/* === btns === */
+.primary-cta-btn {
+    background-color: rgba(134, 155, 186, 0.73);
+}
+
+.secondary-cta-btn {
+    border: 1px solid var(--a-color);
+    color: var(--a-color);
+    font-size: var(--font-size-p);
+    padding: 7px 20px;
+    border-radius: 100px;
+}
+
 /* navigation */
 .primary-nav {
     width: 100%;
@@ -55,6 +90,9 @@ a {
     font-size: 0.9rem;
     position: sticky;
     top: 0;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 
     .sun-en-da {
@@ -63,6 +101,7 @@ a {
         margin: 0;
         padding: 0;
     }
+
 
     ul{
         list-style: none;
@@ -211,7 +250,7 @@ footer {
             width: 40px;
             height: 40px;
             border-radius: 50%;        /* perfect circle */
-            background-color: lightgray;
+            background-color: rgb(195, 172, 151);
             text-decoration: none;
             color: white;
 
@@ -278,7 +317,7 @@ footer {
 
     .home-about {
         grid-area: home;
-        background-color: var(--box-color);
+        background-color: var(--box-color); 
         padding: 30px;
         display: flex;
         flex-direction: column;
@@ -309,8 +348,6 @@ footer {
                 gap: 15px;
 
                 a {
-                    border: 1px solid rgb(184, 184, 184);
-                    color:  rgb(184, 184, 184);
                     text-decoration: none;
                     padding: 5px 10px;
                     border-radius: 100px;
@@ -324,8 +361,7 @@ footer {
 
     .home-project {
         grid-area: project;
-        background-color: lightgray;
-        border: 5px solid white; 
+        background-color: var(--box-color);
         min-height: 200px;
         padding: 10px 20px 20px 20px;
         display: flex;
@@ -384,7 +420,7 @@ footer {
             gap: 5px;
 
             section {
-                background-color: lightgray;
+                background-color: var(--box-color-accent);
                 min-height: 120px;
                 border-radius: 30px;
                 padding: 20px;
@@ -1021,3 +1057,4 @@ footer {
         }
     }
 }
+

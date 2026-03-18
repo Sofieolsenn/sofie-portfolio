@@ -1,1 +1,23 @@
-<button>sun</button>
+<li class="theme-toggle">
+    <button 
+        type="button" 
+        id="theme-toggle-btn" 
+        class="theme-toggle-btn" 
+        aria-label="Toggle light and dark mode"
+    >
+        <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb">
+                <img 
+                    src="{{ url_for('static', filename='img/sun.svg') }}" 
+                    alt="Light mode" 
+                    class="theme-icon theme-icon-sun"
+                >
+                <img 
+                    src="{{ url_for('static', filename='img/moon.svg') }}" 
+                    alt="Dark mode" 
+                    class="theme-icon theme-icon-moon"
+                >
+            </span>
+        </span>
+    </button>
+</li>

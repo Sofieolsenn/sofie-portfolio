@@ -10,9 +10,11 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="noise-overlay">
+        <img src="/static/img/noise.svg" alt="" loading="lazy">
+    </div>
     <main>
         {% include "_nav.html" %}
-        <p>{{ x.lans("hi") }}</p>
         <div id="SPA-container">
             {% include "_home.html" %}
         </div>

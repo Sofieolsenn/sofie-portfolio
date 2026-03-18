@@ -1,10 +1,10 @@
 <article class="home-container">
     <section class="home-about">
-        <h1>Hello, I'm Sofie.</h1>
+        <h1>{{ x.lans("home-hi-im-sofie") }}</h1>
         <div class="home-about-content">
-            <p>I design and build user-friendly digital solutions with clean, maintainable code. As a junior full-stack developer with UX/UI expertise, I handle design, development, and delivery.</p>
+            <p>{{ x.lans("home-intro") }}</p>
             <div class="home-about-content-link">
-                <a class="secondary-cta-btn" href="#">Get in touch</a>
+                <a class="secondary-cta-btn" href="#">{{ x.lans("contact-1") }}</a>
                 <a class="secondary-cta-btn" href="#">Download CV</a>
             </div>
         </div>
@@ -13,7 +13,7 @@
 
     <section class="home-project">
         <div class="home-project-container1">
-            <p>Latest project</p>
+            <p>{{ x.lans("latest-project") }}</p>
         </div>
         <div class="home-project-container2">
             <h3>Clone of twitter</h3>
@@ -29,26 +29,26 @@
         <div class="home-services-content">
             <section>
                 <h3>1</h3>
-                <p>Website Development, Design, Deployment - <i>Frontend/Backend and Databases</i></p>
+                <p>{{ x.lans("service-1") }} - <i>Frontend/Backend {{ x.lans("and") }} {{ x.lans("databases") }}</i></p>
             </section>
             <section>
                 <h3>2</h3>
-                <p>Brand Identity, Concept Development & Rebranding</p>
+                <p>{{ x.lans("service-2") }}</p>
             </section>
             <section>
                 <h3>3</h3>
-                <p>Product Prototyping and design for Apps & Digital Systems</p>
+                <p>{{ x.lans("service-3") }}</p>
             </section>
             <section>
                 <h3>4</h3>
-                <p>Dont let this list limit you, I’m always open for new challenges.</p>
+                <p>{{ x.lans("service-4") }}.</p>
             </section>
         </div>
     </section>
 
     <section class="home-abilities">
         <div class="home-abilities-header-container">
-            <h2>Abilites</h2>
+            <h2>{{ x.lans("skills") }}</h2>
             <i class="fa-solid fa-angle-right"></i>
         </div>
         <div class="home-abilities-content-container">

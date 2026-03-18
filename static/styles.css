@@ -74,10 +74,21 @@ a {
 
 .secondary-cta-btn {
     border: 1px solid var(--a-color);
-    color: var(--a-color);
+    color: #456fbe;
     font-size: var(--font-size-p);
+    background-color: #6b99d245;
     padding: 7px 20px;
     border-radius: 100px;
+    min-width: 150px;
+    max-width: fit-content;
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondary-cta {
+    background-color: #d26bb745;
+    color: #456fbe;
+    border: 1px solid var(--a-color);
 }
 
 /* navigation */

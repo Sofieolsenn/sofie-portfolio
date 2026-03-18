@@ -5,28 +5,138 @@
         "japanese": "konichiwa"
     },
     "home": {
-        "english": "home",
-        "danish": "hjem",
+        "english": "Home",
+        "danish": "Hjem",
         "japanese": ""
     },
     "about": {
-        "english": "about",
-        "danish": "om mig",
+        "english": "About",
+        "danish": "Om mig",
         "japanese": ""
     },
     "projects": {
-        "english": "projects",
-        "danish": "projekter",
+        "english": "Projects",
+        "danish": "Projekter",
         "japanese": ""
     },
     "skills": {
-        "english": "tech skills",
-        "danish": "kompetencer",
+        "english": "Abilities",
+        "danish": "Evner",
         "japanese": ""
     },
     "contact": {
-        "english": "contact",
+        "english": "Contact",
         "danish": "Kontakt",
+        "japanese": ""
+    },
+    "services": {
+        "english": "Services",
+        "danish": "Services",
+        "japanese": ""
+    },
+    "and": {
+        "english": "and",
+        "danish": "og",
+        "japanese": ""
+    },
+    "home-hi-im-sofie": {
+        "english": "Hello, I'm Sofie",
+        "danish": "Hej, jeg hedder Sofie",
+        "japanese": ""
+    },
+    "home-intro": {
+        "english": "I design and build user-friendly digital solutions with clean, maintainable code. As a junior full-stack developer with UX/UI expertise, I handle design, development, and delivery.",
+        "danish": "Jeg designer og udvikler brugervenlige digitale løsninger med fokus på kvalitet og vedligeholdelsesvenlig kode. Med stærke UX/UI-kompetencer arbejder jeg med både design, udvikling, kode og levering af digitale produkter.",
+        "japanese": ""
+    },
+    "databases": {
+        "english": "databases",
+        "danish": "databaser",
+        "japanese": ""
+    },
+    "contact-1": {
+        "english": "Get in touch",
+        "danish": "Kontakt mig",
+        "japanese": ""
+    },
+    "contact-2": {
+        "english": "Let's build your idea",
+        "danish": "Lad os arbejde sammen",
+        "japanese": ""
+    },
+    "contact-3": {
+        "english": "Lets build your vision",
+        "danish": "Har du et projekt? Kontakt mig",
+        "japanese": ""
+    },
+    "": {
+        "english": "Website Development, Design, Deployment - Frontend/Backend and Databases\nFor freelancers, creators, startups, or businesses that need a professional website or digital platform.\n02\n\nBrand Identity, Concept Development & Rebranding\nFor startups and businesses that want a strong visual identity or a fresh new brand direction.\n03\n\nProduct Prototyping and design for Apps & Digital Systems\nFor founders and teams who want to turn an idea into a testable digital product.\n04\n\nDont let this list limit you, I’m always open for new challenges.\nHave an idea, problem, or project in mind? Let’s talk and figure out the best solution together.",
+        "danish": "",
+        "japanese": ""
+    },
+    "latest-project": {
+        "english": "Latest project",
+        "danish": "Seneste projekt",
+        "japanese": ""
+    },
+    "service-1": {
+        "english": "Website Development, Design, Deployment",
+        "danish": "Webudvikling, design og lancering af hjemmeside",
+        "japanese": ""
+    },
+    "service-1-1": {
+        "english": "",
+        "danish": "",
+        "japanese": ""
+    },
+    "service-2": {
+        "english": "Brand Identity, Concept Development & Rebranding",
+        "danish": "Brandidentitet, konceptudvikling og rebranding",
+        "japanese": ""
+    },
+    "service-2-1": {
+        "english": "",
+        "danish": "",
+        "japanese": ""
+    },
+    "service-3": {
+        "english": "Product Prototyping and design for Apps & Digital Systems",
+        "danish": "Produktprototyping og design af apps og digitale systemer",
+        "japanese": ""
+    },
+    "service-3-1": {
+        "english": "",
+        "danish": "",
+        "japanese": ""
+    },
+    "service-4": {
+        "english": "Dont let this list limit you, I’m always open for new challenges",
+        "danish": "Jeg er ikke begrænset af denne liste, og er altid åben for nye udfordringer",
+        "japanese": ""
+    },
+    "service-4-1": {
+        "english": "",
+        "danish": "",
+        "japanese": ""
+    },
+    "about-1": {
+        "english": "I design and build user-friendly digital solutions with clean, maintainable code. I’m currently studying web\n                development and working toward becoming a confident and experienced full-stack developer.",
+        "danish": "Jeg designer og bygger brugervenlige digitale løsninger med ren og vedligeholdelsesvenlig kode. Lige nu studerer jeg webudvikling og arbejder på at blive en selvsikker og erfaren full-stack udvikler.",
+        "japanese": ""
+    },
+    "about-2": {
+        "english": "  In my free time, I rewatch Game of Thrones and Star Wars, play Minecraft, and enjoy drawing both traditionally\n               and digitally. I also have an unhealthy obsession with tea cups and dogs—if I see a dog, I will ask to pet it.\n                If you’d like to know more about me, feel free to reach out. I enjoy meeting new people and collaborating on\n                projects.",
+        "danish": "I min fritid ser jeg Game of Thrones og Star Wars indtil mine øjne bliver firkantet. I den sammenhæng spiller Minecraft absurd meget og jeg elsker at tegne – både traditionelt og digitalt. Jeg har også en lille besættelse af tekopper og hunde – hvis jeg ser en hund, sørger jeg for at give den et klap på hovedet. Hvis du vil vide mere om mig, er du altid velkommen til at skrive. Jeg elsker at møde nye mennesker og deltage i alverdens projekter.",
+        "japanese": ""
+    },
+    "about-3": {
+        "english": "I’m still early in my career, which means I’m always eager to take on new challenges and learn new technologies. I’m open to different types of projects and would love the opportunity to contribute and gain more experience.",
+        "danish": "Jeg er altid klar på nye udfordringer, projekter og alt som kan bidrage til at jeg får mere erfaring og selvtillid når det kommer til at udvikle og skabe et produkt for andre. ",
+        "japanese": ""
+    },
+    "about-4": {
+        "english": "",
+        "danish": "",
         "japanese": ""
     }
 }
